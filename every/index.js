@@ -25,7 +25,7 @@ interval(500)
   .pipe(
     map(data => data * 2),
     tap(data => console.log(data)),
-    take(10),
+    // take(10),
     every(data => data % 2 === 0),
   )
   .subscribe(data => console.log(data));
