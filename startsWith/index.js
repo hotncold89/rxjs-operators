@@ -1,9 +1,10 @@
-import { interval } from 'rxjs';
+import { timer } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
 
-const ticker = interval(1000)
+console.info('Quick start! And wait...');
+const tickerWithDelay = timer(5000, 1000)
   .pipe(
-    map(() => 'World!!!'),
-    startWith('Hello'),
+    map(() => 'world...'),
+    startWith('Hello!!!!!!'),
   )
   .subscribe(data => console.log(data));
