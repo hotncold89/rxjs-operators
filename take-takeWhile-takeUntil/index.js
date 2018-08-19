@@ -1,4 +1,4 @@
-import { interval } from 'rxjs';
+import { interval, timer } from 'rxjs';
 import { take, takeWhile, takeUntil } from 'rxjs/operators';
 
 // It emits first 5 values.
